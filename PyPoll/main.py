@@ -8,6 +8,8 @@
 # start here
 # create variables
 # open the file
+import csv
+file_path = "PyPoll\Resources\election_data.csv"
 # read a row in the file
 # add to total votes
 # print the results to screen
