@@ -5,6 +5,14 @@
 # 4. The total number of votes each candidate won
 # 5. The winner of the election based on popular vote
 
+# start here
+# create variables
+# open the file
+# read a row in the file
+# add to total votes
+# print the results to screen
+# print the results to file
+
 # example output
 # Election Results
 # -------------------------
