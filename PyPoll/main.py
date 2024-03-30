@@ -1,6 +1,6 @@
 import csv
 # Needed:
-# 1. The total number of votes cast
+# 1. The total number of votes cast - done
 # 2. A complete list of candidates who received votes
 # 3. The percentage of votes each candidate won
 # 4. The total number of votes each candidate won
@@ -19,7 +19,9 @@ with open(election_file_path) as election_file:
         # add to total votes
         print(row)
 # print the results to screen
-print(total_votes)
+print('-------------------------')
+print(f'Total Votes: {total_votes}')
+print('-------------------------')
 # print the results to file
 
 # example output
