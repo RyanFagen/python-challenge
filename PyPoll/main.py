@@ -1,4 +1,5 @@
-#
+import csv
+# Needed:
 # 1. The total number of votes cast
 # 2. A complete list of candidates who received votes
 # 3. The percentage of votes each candidate won
@@ -8,6 +9,7 @@
 # start here
 # create variables
 election_file_path = "PyPoll\Resources\election_data.csv"
+total_votes = 0
 # open the file
 with open(election_file_path) as election_file:
     csv_file = csv.reader(election_file)
@@ -16,6 +18,7 @@ with open(election_file_path) as election_file:
         # add to total votes
         print(row)
 # print the results to screen
+print(total_votes)
 # print the results to file
 
 # example output
