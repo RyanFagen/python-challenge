@@ -11,6 +11,7 @@ import csv
 election_file_path = "PyPoll\Resources\election_data.csv"
 total_votes = 0
 candidates = []
+candidate_votes = []
 # open the file
 with open(election_file_path) as election_file:
     csv_file = csv.reader(election_file)
@@ -25,13 +26,15 @@ with open(election_file_path) as election_file:
         # check to see if the candidate exists
         if candidate not in candidates:
             # add to list if they haven't been added to the list
-            candidates.append(candidate) 
+            candidates.append(candidate)
+            candidate_votes.append(1) 
 # print the results to screen
 print('-------------------------')
 print(f'Total Votes: {total_votes}')
 print('-------------------------')
 print(len(candidates), "candidates")
 print(candidates, "candidates")
+print(candidate_votes)
 # print the results to file
 
 # example output
