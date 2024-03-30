@@ -2,7 +2,7 @@ import csv
 # Needed:
 # 1. The total number of votes cast - done
 # 2. A complete list of candidates who received votes - done*
-# 3. The percentage of votes each candidate won
+# 3. The percentage of votes each candidate won - done*
 # 4. The total number of votes each candidate won - done*
 # 5. The winner of the election based on popular vote
 
