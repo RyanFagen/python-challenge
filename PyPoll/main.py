@@ -27,7 +27,10 @@ with open(election_file_path) as election_file:
         if candidate not in candidates:
             # add to list if they haven't been added to the list
             candidates.append(candidate)
-            candidate_votes.append(1) 
+            candidate_votes.append(1)
+        else:
+            candidate_id = candidates.index(candidate) 
+            candidate_votes[candidate_id] += 1
 # print the results to screen
 print('-------------------------')
 print(f'Total Votes: {total_votes}')
