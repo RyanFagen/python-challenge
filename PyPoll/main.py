@@ -10,6 +10,7 @@ import csv
 # create variables
 election_file_path = "PyPoll\Resources\election_data.csv"
 total_votes = 0
+candidates = []
 # open the file
 with open(election_file_path) as election_file:
     csv_file = csv.reader(election_file)
@@ -17,7 +18,10 @@ with open(election_file_path) as election_file:
     # read a row in the file
     for row in csv_file:
         # add to total votes
-        print(row)
+        total_votes += 1
+        ballot_id = row[0]
+        county = row[1]
+        candidate = row[2]
 # print the results to screen
 print('-------------------------')
 print(f'Total Votes: {total_votes}')
