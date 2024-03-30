@@ -36,7 +36,9 @@ print('-------------------------')
 print(f'Total Votes: {total_votes}')
 print('-------------------------')
 for candidate in candidates:
-    print(f'{candidate}: ({candidate_votes[candidates.index(candidate)]})')
+    current_candidate_votes = candidate_votes[candidates.index(candidate)]
+    current_vote_pct = (current_candidate_votes / total_votes) * 100
+    print(f'{candidate}: {current_vote_pct}% ({candidate_votes})')
 print(len(candidates), "candidates")
 print(candidates, "candidates")
 print(candidate_votes)
