@@ -13,6 +13,7 @@ total_votes = 0
 # open the file
 with open(election_file_path) as election_file:
     csv_file = csv.reader(election_file)
+    next(csv_file) # skips a row in the file (first row = header row)
     # read a row in the file
     for row in csv_file:
         # add to total votes
