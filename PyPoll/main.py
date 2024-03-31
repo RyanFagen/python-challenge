@@ -1,9 +1,9 @@
 import csv
 # Needed:
 # 1. The total number of votes cast - done
-# 2. A complete list of candidates who received votes - done*
-# 3. The percentage of votes each candidate won - done*
-# 4. The total number of votes each candidate won - done*
+# 2. A complete list of candidates who received votes - done
+# 3. The percentage of votes each candidate won - done
+# 4. The total number of votes each candidate won - done
 # 5. The winner of the election based on popular vote
 
 # start here
@@ -37,11 +37,12 @@ print(f'Total Votes: {total_votes}')
 print('-------------------------')
 for candidate in candidates:
     current_candidate_votes = candidate_votes[candidates.index(candidate)]
-    current_vote_pct = (current_candidate_votes / total_votes) * 100
-    print(f'{candidate}: {current_vote_pct}% ({candidate_votes})')
-print(len(candidates), "candidates")
-print(candidates, "candidates")
-print(candidate_votes)
+    current_vote_pct = '{:.3f}'.format((current_candidate_votes / total_votes) * 100)
+    print(f'{candidate}: {current_vote_pct}% ({current_candidate_votes})')
+print('-------------------------')
+# print(len(candidates), "candidates")
+# print(candidates, "candidates")
+# print(candidate_votes)
 # print the results to file
 
 # example output
