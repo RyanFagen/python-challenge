@@ -4,3 +4,8 @@ total_months = 0
 net_total = 0
 max_increase = 0
 min_increase = 0
+max_month = "null"
+min_month = "null"
+with open(bank_file_path) as election_file:
+    csv_file = csv.reader(election_file)
+    next(csv_file)
