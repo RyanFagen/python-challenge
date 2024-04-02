@@ -20,9 +20,9 @@ with open(bank_file_path) as bank_file:
         elif (current_value < max_decrease):
             min_month = row[0]
             max_decrease = current_value
-print(f'{total_months}')
-print(f'{net_total}')
-print(f'{max_month}')
-print(f'{max_increase}')
-print(f'{min_month}')
-print(f'{max_decrease}')
+print("Financial Analysis")
+print("----------------------------")
+print(f'Total Months: {total_months}')
+print(f'Total: ${net_total}')
+print(f'Greatest Increase in Profits: {max_month} (${max_increase})')
+print(f'Greatest Decrease in Profits: {min_month} (${max_decrease})')
