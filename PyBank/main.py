@@ -1,5 +1,5 @@
 import csv
-bank_file_path = "PyPoll\Resources\budget_data.csv"
+bank_file_path = "PyBank\Resources\money_data.csv"
 total_months = 0
 net_total = 0
 max_increase = 0
