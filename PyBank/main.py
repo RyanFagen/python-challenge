@@ -14,5 +14,9 @@ with open(bank_file_path) as bank_file:
         total_months += 1
         current_value = int(row[1])
         net_total += int(row[1])
+        if (current_value > max_increase):
+            max_increase = current_value
+        elif (current_value < min_increase):
+            min_increase = current_value
 print(f'{total_months}')
 print(f'{net_total}')
