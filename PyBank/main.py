@@ -11,4 +11,6 @@ with open(bank_file_path) as bank_file:
     next(csv_file)
     for row in csv_file:
         total_months += 1
+        net_total += int(row[1])
 print(f'{total_months}')
+print(f'{net_total}')
