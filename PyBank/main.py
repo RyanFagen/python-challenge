@@ -20,3 +20,5 @@ with open(bank_file_path) as bank_file:
             max_decrease = current_value
 print(f'{total_months}')
 print(f'{net_total}')
+print(f'{max_increase}')
+print(f'{max_decrease}')
