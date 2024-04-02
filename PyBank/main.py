@@ -6,6 +6,6 @@ max_increase = 0
 min_increase = 0
 max_month = "null"
 min_month = "null"
-with open(bank_file_path) as election_file:
-    csv_file = csv.reader(election_file)
+with open(bank_file_path) as bank_file:
+    csv_file = csv.reader(bank_file)
     next(csv_file)
