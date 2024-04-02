@@ -4,7 +4,7 @@ total_months = 0
 net_total = 0
 current_value = 0
 max_increase = 0
-min_increase = 0
+max_decrease = 0
 max_month = "null"
 min_month = "null"
 with open(bank_file_path) as bank_file:
@@ -16,7 +16,7 @@ with open(bank_file_path) as bank_file:
         net_total += int(row[1])
         if (current_value > max_increase):
             max_increase = current_value
-        elif (current_value < min_increase):
-            min_increase = current_value
+        elif (current_value < max_decrease):
+            max_decrease = current_value
 print(f'{total_months}')
 print(f'{net_total}')
