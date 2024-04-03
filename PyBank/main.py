@@ -8,6 +8,7 @@ max_increase = 0
 max_decrease = 0
 changes = []
 monthly_change = 0
+average_change = 0
 max_month = "null"
 min_month = "null"
 with open(bank_file_path) as bank_file:
@@ -27,10 +28,11 @@ with open(bank_file_path) as bank_file:
             monthly_change = current_value - previous_value
             changes.append(monthly_change)
         previous_value = current_value
-print(f'{changes}')
+average_change = sum(changes) / len(changes)
 print("Financial Analysis")
 print("----------------------------")
 print(f'Total Months: {total_months}')
 print(f'Total: ${net_total}')
+print(f'Average Change: ${average_change}')
 print(f'Greatest Increase in Profits: {max_month} (${max_increase})')
 print(f'Greatest Decrease in Profits: {min_month} (${max_decrease})')
