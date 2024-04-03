@@ -36,3 +36,12 @@ print(f'Total: ${net_total}')
 print(f'Average Change: ${average_change:.2f}')
 print(f'Greatest Increase in Profits: {max_month} (${max_increase})')
 print(f'Greatest Decrease in Profits: {min_month} (${max_decrease})')
+out_file_path = "PyPoll\election_results.txt"
+with open(out_file_path, 'w') as file_out:
+    file_out.write("Financial Analysis\n")
+    file_out.write("----------------------------\n")
+    file_out.write(f'Total Months: {total_months}\n')
+    file_out.write(f'Total: ${net_total}\n')
+    file_out.write(f'Average Change: ${average_change:.2f}\n')
+    file_out.write(f'Greatest Increase in Profits: {max_month} (${max_increase})\n')
+    file_out.write(f'Greatest Decrease in Profits: {min_month} (${max_decrease})\n')
