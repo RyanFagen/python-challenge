@@ -48,10 +48,23 @@ for candidate in candidates:
 print('-------------------------')
 print(f'Winner: {winning_candidate}')
 print('-------------------------')
-# print(len(candidates), "candidates")
-# print(candidates, "candidates")
-# print(candidate_votes)
 # print the results to file
+out_file_path = "PyPoll\election_results.txt"
+with open(out_file_path, 'w') as file_out:
+    file_out.write('Election Results\n')
+    file_out.write('-------------------------\n')
+    file_out.write(f'Total Votes: {total_votes}\n')
+    file_out.write('-------------------------\n')
+    for candidate in candidates:
+        current_candidate_votes = candidate_votes[candidates.index(candidate)]
+        if current_candidate_votes > winning_votes:
+            winning_votes = current_candidate_votes
+            winning_candidate = candidate
+        current_vote_pct = '{:.3f}'.format((current_candidate_votes / total_votes) * 100)
+        file_out.write(f'{candidate}: {current_vote_pct}% ({current_candidate_votes})\n')
+    file_out.write('-------------------------\n')
+    file_out.write(f'Winner: {winning_candidate}\n')
+    file_out.write('-------------------------\n')
 
 # example output
 # Election Results
